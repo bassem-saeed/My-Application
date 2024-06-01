@@ -22,8 +22,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: Set Up Gradle (Optional)  # You can keep this or remove it
-        uses: gradle/wrapper-validation@v1  # This can be removed for Gradle 8.x
+    #  - name: Set Up Gradle (Optional)  # You can keep this or remove it
+     #   uses: gradle/wrapper-validation@v1  # This can be removed for Gradle 8.x
 
       - name: Install Android SDK (Optional)
         # Uncomment if you need to install SDK within the workflow
