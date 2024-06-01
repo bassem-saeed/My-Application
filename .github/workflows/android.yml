@@ -44,7 +44,7 @@ jobs:
           export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
           export PATH=$ANDROID_HOME/platform-tools:$PATH
           yes | sdkmanager --licenses
-          sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.4"
+          sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.2"
 
       - name: Grant Gradle Permissions
         run: chmod +x gradlew
