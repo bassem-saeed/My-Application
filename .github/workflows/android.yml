@@ -9,12 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-            - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Gradle Wrapper Validation
         uses: gradle/wrapper-validation-action@v3.3.2  # Or latest version
-        
-      - uses: actions/checkout@v3
 
       - name: Use Gradle Cache (Optional)
         uses: actions/cache@v3
@@ -24,8 +22,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      - name: Set Up Gradle
-        uses: gradle/wrapper-validation@v1
+      - name: Set Up Gradle (Optional)  # You can keep this or remove it
+        uses: gradle/wrapper-validation@v1  # This can be removed for Gradle 8.x
 
       - name: Install Android SDK (Optional)
         # Uncomment if you need to install SDK within the workflow
@@ -36,4 +34,4 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build with Gradle
-        run: ./gradlew assembleDebug #-Pandroid.enableJetifier=true  # Optional for R8/ProGuard compatibility
+        run: ./gradlew assembleDebug -Pandroid.enableJetifier=true  # Optional for R8/ProGuard compatibility
