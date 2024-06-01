@@ -25,10 +25,10 @@ jobs:
     #  - name: Set Up Gradle (Optional)  # You can keep this or remove it
      #   uses: gradle/wrapper-validation@v1  # This can be removed for Gradle 8.x
 
-      - name: Install Android SDK (Optional)
+    #  - name: Install Android SDK (Optional)
         # Uncomment if you need to install SDK within the workflow
-        run: |
-          echo "y" | sdkmanager "platforms;android-34" "build-tools;34.0.4"
+       # run: |
+         # echo "y" | sdkmanager "platforms;android-34" "build-tools;34.0.4"
 
       - name: Grant Gradle Permissions
         run: chmod +x gradlew
